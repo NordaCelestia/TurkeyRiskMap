@@ -10,6 +10,7 @@ public class PlayTimeline : MonoBehaviour
    
     void Start()
     {
+        canvas.SetActive(true);
         StartCoroutine(CanvasDisable());
         
     }
@@ -18,7 +19,7 @@ public class PlayTimeline : MonoBehaviour
     {
         director.Play();
 
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(4.9f);
         canvas.SetActive(false);
     }
 }
