@@ -10,7 +10,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField]
     private float zoomStep, minCamSize, maxCamSize;
 
-
+    float zoom = 7;
 
 
     private Vector3 dragOrigin;
@@ -19,6 +19,15 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         PanCamera();
+
+        if (cam.orthographic)
+        {
+            cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * zoom;
+        }
+        else
+        {
+            cam.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * zoom;
+        }
     }
 
     private void PanCamera()
@@ -36,15 +45,5 @@ public class CameraMovement : MonoBehaviour
         }
     }
 
-    private void zoomIn()
-    {
-        float newSize = cam.orthographicSize - zoomStep;
-        cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
-    }
-
-    private void zoomOut()
-    {
-        float newSize = cam.orthographicSize + zoomStep;
-        cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
-    }
+   
 }
