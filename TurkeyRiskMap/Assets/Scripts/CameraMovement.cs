@@ -12,21 +12,25 @@ public class CameraMovement : MonoBehaviour
 
     float zoom = 7;
 
+    public PlayTimeline script;
 
     private Vector3 dragOrigin;
 
     // Update is called once per frame
     void Update()
     {
-        PanCamera();
+        if (script.isLocked == false)
+        {
+            PanCamera();
 
-        if (cam.orthographic)
-        {
-            cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * zoom;
-        }
-        else
-        {
-            cam.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * zoom;
+            if (cam.orthographic)
+            {
+                cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * zoom;
+            }
+            else
+            {
+                cam.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * zoom;
+            }
         }
     }
 
