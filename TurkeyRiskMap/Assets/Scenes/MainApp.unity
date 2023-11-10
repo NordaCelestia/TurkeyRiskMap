@@ -1738,6 +1738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 813670657}
+  pName: {fileID: 842051009}
+  pInfo: {fileID: 870570157}
 --- !u!4 &1298973423
 Transform:
   m_ObjectHideFlags: 0
@@ -2326,7 +2328,7 @@ GameObject:
   - component: {fileID: 1627025150}
   m_Layer: 5
   m_Name: Ankara
-  m_TagString: Untagged
+  m_TagString: Ankara
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2363,6 +2365,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
+  pName: {fileID: 0}
+  pInfo: {fileID: 0}
 --- !u!114 &1627025151
 MonoBehaviour:
   m_ObjectHideFlags: 0
