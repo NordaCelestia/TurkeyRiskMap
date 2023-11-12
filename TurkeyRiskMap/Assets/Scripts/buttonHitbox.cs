@@ -17,12 +17,16 @@ public class buttonHitbox : MonoBehaviour
 
     public void openCanvas()
     {
-        if (this.gameObject.tag == "Ankara")
-        {
+
+        Debug.Log("openCanvas çalýþtý");
+            if (this.gameObject.tag == "Ankara")
+            {
+            Debug.Log("ife girdi");
             pName.text = "Ankara";
-            pInfo.text = "daðlýk yer";
-        }
-        canvas.SetActive(true);
+                pInfo.text = "daðlýk yer";
+            }
+            canvas.SetActive(true);
+        
     }
     
     public void closeCanvas()
