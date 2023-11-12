@@ -29,7 +29,7 @@ public class buttonHitbox : MonoBehaviour
             case "Ankara":
                 
                     pName.text = "Ankara";
-                    pInfo.text = "daðlýk yer";
+                    pInfo.text = " Etrafý daðlarla çevrili olan Ankara, kýþlarý soðuk, yazlarý kurak geçen bir iklime sahiptir. En yaðýþlý mevsim ilkbahardýr. Bu iklim þartlarý ve topografik yapý Ankara ve çevresinde iki ayrý bitki topluluðunun (step ve orman) geliþmesine imkan saðlamýþtýr.";
 
 
                     canvas.SetActive(true);
@@ -64,6 +64,7 @@ public class buttonHitbox : MonoBehaviour
     public void onMouseExit()
     {
         inspector.SetActive(false);
+        StopAllCoroutines();
     }
 
     public void closeCanvas()
