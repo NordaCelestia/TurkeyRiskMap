@@ -5,11 +5,11 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class buttonHitbox : MonoBehaviour
+public class buttonActivites : MonoBehaviour
 {
     
     public GameObject canvas, inspector;
-    public TMP_Text pName, pInfo, IText;
+    public TMP_Text pName, pInfo, IText, IRain, IDisaster,ISoil;
     
 
     void Start()
@@ -47,11 +47,12 @@ public class buttonHitbox : MonoBehaviour
                 break;
 
 
-        }
-            
-            
+            case "Adýyaman":
 
-            
+                pName.text = "Adýyaman";
+                pInfo.text = "adamý yerler";
+                break;
+        } 
         
     }
 
@@ -82,7 +83,9 @@ public class buttonHitbox : MonoBehaviour
 
 
                 IText.text = "Ankara";
-
+                IRain.text = "%38";
+                ISoil.text = "Kuru toprak";
+                IDisaster.text = "Deprem";
 
                 inspector.SetActive(true);
 
@@ -90,12 +93,29 @@ public class buttonHitbox : MonoBehaviour
 
             case "Adana":
 
-
                 IText.text = "Adana";
+                IRain.text = "%21";
+                ISoil.text = "Kuru toprak";
+                IDisaster.text = "Yangýn";
 
                 inspector.SetActive(true);
 
                 break;
+
+                
+
+            case "Adýyaman":
+
+                IText.text = "Adýyaman";
+                IRain.text = "%37";
+                ISoil.text = "Bol mineralli toprak";
+                IDisaster.text = "Deprem";
+
+                inspector.SetActive(true);
+
+                break;
+
+                
             default:
                 Debug.Log("Nothing");
                 break;

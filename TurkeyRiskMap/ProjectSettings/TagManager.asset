@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ankara
   - Adana
+  - "Ad\u0131yaman"
   layers:
   - Default
   - TransparentFX
