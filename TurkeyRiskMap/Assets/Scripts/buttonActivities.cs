@@ -42,15 +42,14 @@ public class buttonActivites : MonoBehaviour
 
                     canvas.SetActive(true);
                 break;
-            default:
-                Debug.Log("Nothing");
-                break;
 
 
             case "Adýyaman":
 
                 pName.text = "Adýyaman";
                 pInfo.text = "adamý yerler";
+                canvas.SetActive(true);
+
                 break;
         } 
         

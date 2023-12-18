@@ -1089,6 +1089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 506379088}
+  buttons: {fileID: 972725599}
   director: {fileID: 772371019}
   isLocked: 0
 --- !u!1 &531918053
@@ -3926,7 +3927,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1995574836}
-        m_TargetAssemblyTypeName: buttonHitbox, Assembly-CSharp
+        m_TargetAssemblyTypeName: buttonActivites, Assembly-CSharp
         m_MethodName: openCanvas
         m_Mode: 1
         m_Arguments:
