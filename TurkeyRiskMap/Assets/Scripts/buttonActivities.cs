@@ -10,51 +10,22 @@ public class buttonActivites : MonoBehaviour
     
     public GameObject canvas, inspector;
     public TMP_Text pName, pInfo, IText, IRain, IDisaster,ISoil;
-    
+    string tagControl;
 
     void Start()
     {
         this.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.1f;
     }
 
-    
+
 
     //-------------------------------------------------------------------------------SWITCH CASE
     public void openCanvas()
     {
-        
 
-        switch (this.gameObject.tag)
-        {
-            case "Ankara":
-                
-                    pName.text = "Ankara";
-                    pInfo.text = " Etrafý daðlarla çevrili olan Ankara, kýþlarý soðuk, yazlarý kurak geçen bir iklime sahiptir. En yaðýþlý mevsim ilkbahardýr. Bu iklim þartlarý ve topografik yapý Ankara ve çevresinde iki ayrý bitki topluluðunun (step ve orman) geliþmesine imkan saðlamýþtýr.";
+        tagControl = this.gameObject.tag;
 
-
-                    canvas.SetActive(true);
-                break;
-                
-            case "Adana":
-                
-                    pName.text = "Adana";
-                    pInfo.text = "adamý yerler";
-
-                    canvas.SetActive(true);
-                break;
-
-
-            case "Adýyaman":
-
-                pName.text = "Adýyaman";
-                pInfo.text = "adamý yerler";
-                canvas.SetActive(true);
-
-                break;
-        } 
-        
     }
-
     public void onMouseEnter()
     {
         StartCoroutine(mouseEnter());
