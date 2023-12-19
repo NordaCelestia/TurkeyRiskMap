@@ -7,7 +7,7 @@ using System.Data;
 public class Database : MonoBehaviour
 {
     string dbName = "URI=file:" + @"D:\Unity projects\TurkeyRiskMap\TurkeyRiskMap\TurkeyRiskMap\TurkeyRiskMap.db";
-    public int targetPlateNumber = 10; // Hedef PlateNumber deðerini belirtin
+    public int targetPlateNumber = 10; 
 
     void Start()
     {
