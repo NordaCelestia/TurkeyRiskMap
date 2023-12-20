@@ -9,9 +9,11 @@ using System;
 public class buttonActivites : MonoBehaviour
 {
     Database db;
-
+    
     public GameObject canvas, inspector;
-    public TMP_Text pName, pInfo, IText, IRain, IDisaster,ISoil;
+    public TMP_Text pName, pInfo, IText, IRain, IDisaster, ISoil;
+
+
     string[] controlArray = new string[81];
 
 
@@ -39,20 +41,13 @@ public class buttonActivites : MonoBehaviour
     
     public void openCanvas()
     {
-
-        
-        
-    }
-
-    public void onMouseEnter()
-    {
         for (int i = 0; i < controlArray.Length; i++)
         {
             if (this.gameObject.tag == controlArray[i])
             {
-               
+
                 Debug.Log("oldu");
-                db.getData(Convert.ToInt32(controlArray[i]));
+                //db.getData(Convert.ToInt32(controlArray[i]));
             }
             else
             {
@@ -60,12 +55,33 @@ public class buttonActivites : MonoBehaviour
             }
         }
 
+
     }
 
-    public void onMouseExit()
+    public void onMouseEnter()
     {
-        inspector.SetActive(false);
         
+
+        for (int i = 0; i < controlArray.Length; i++)
+        {
+            if (this.gameObject.tag == controlArray[i])
+            {
+               
+                Debug.Log("oldu");
+                
+                inspector.SetActive(true);
+
+                
+
+                IText.text = db.getData(Convert.ToInt32(controlArray[i]), "city");
+                IRain.text = db.getData(Convert.ToInt32(controlArray[i]), "rainfall");
+                IDisaster.text = db.getData(Convert.ToInt32(controlArray[i]), "disaster");
+                ISoil.text = db.getData(Convert.ToInt32(controlArray[i]), "soil");
+
+
+            }
+        }
+
     }
 
     public void closeCanvas()
@@ -73,5 +89,14 @@ public class buttonActivites : MonoBehaviour
         canvas.SetActive(false);
     }
 
-    
+
+
+    public void InspectorExit()
+    {
+        inspector.SetActive(false);
+    }
+
+
+
+
 }

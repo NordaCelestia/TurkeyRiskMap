@@ -11,6 +11,8 @@ TagManager:
   - 2
   - 3
   - 6
+  - DB
+  - 63
   layers:
   - Default
   - TransparentFX

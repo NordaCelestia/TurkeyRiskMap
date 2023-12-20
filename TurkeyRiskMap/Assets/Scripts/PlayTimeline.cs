@@ -14,7 +14,7 @@ public class PlayTimeline : MonoBehaviour
     {
         buttons.SetActive(false);
         canvas.SetActive(true);
-        StartCoroutine(CanvasDisable());
+        StartCoroutine(CanvasDisable()); 
         
     }
 
