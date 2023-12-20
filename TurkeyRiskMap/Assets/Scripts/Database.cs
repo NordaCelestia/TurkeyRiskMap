@@ -6,12 +6,11 @@ using System.Data;
 
 public class Database : MonoBehaviour
 {
-    string dbName = "URI=file:" + @"D:\Unity projects\TurkeyRiskMap\TurkeyRiskMap\TurkeyRiskMap\TurkeyRiskMap.db";
-    public int targetPlateNumber = 10; 
+    string dbName = "URI=file:" + @"D:\Unity projects\TurkeyRiskMap\TurkeyRiskMap\TurkeyRiskMap\TurkeyRiskMap.db"; 
 
     void Start()
     {
-        getData();
+        
     }
 
     void Update()
@@ -19,7 +18,7 @@ public class Database : MonoBehaviour
 
     }
 
-    public void getData()
+    public void getData(int targetPlateNumber)
     {
         using (var connection = new SqliteConnection(dbName))
         {
@@ -27,9 +26,9 @@ public class Database : MonoBehaviour
 
             using (var command = connection.CreateCommand())
             {
-                // Hedef PlateNumber'ý sorgunuzda kullanmak için doðru syntax kullanýn
-                string sorgu = "SELECT NaturalDisasters FROM TurkeyRiskMap WHERE PlateNumber = "+ targetPlateNumber;
-                command.CommandText = sorgu;
+                
+                string disaster = "SELECT NaturalDisasters FROM TurkeyRiskMap WHERE PlateNumber = "+ targetPlateNumber;
+                command.CommandText = disaster;
 
                 using (IDataReader reader = command.ExecuteReader())
                 {
@@ -44,6 +43,8 @@ public class Database : MonoBehaviour
                     }
                 }
             }
+            connection.Close();
         }
+        
     }
 }
