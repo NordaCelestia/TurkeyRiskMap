@@ -46,13 +46,12 @@ public class buttonActivites : MonoBehaviour
             if (this.gameObject.tag == controlArray[i])
             {
 
-                Debug.Log("oldu");
-                //db.getData(Convert.ToInt32(controlArray[i]));
+                pName.text = db.getData(Convert.ToInt32(controlArray[i]), "city");
+                pInfo.text = db.getData(Convert.ToInt32(controlArray[i]), "cityInfo");
+                canvas.SetActive(true);
+
             }
-            else
-            {
-                continue;
-            }
+
         }
 
 

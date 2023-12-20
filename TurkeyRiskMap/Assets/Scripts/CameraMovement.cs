@@ -16,7 +16,6 @@ public class CameraMovement : MonoBehaviour
 
     private Vector3 dragOrigin;
 
-    // Update is called once per frame
     void Update()
     {
         if (script.isLocked == false)
