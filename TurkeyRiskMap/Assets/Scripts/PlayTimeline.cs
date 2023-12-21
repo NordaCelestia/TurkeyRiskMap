@@ -12,9 +12,9 @@ public class PlayTimeline : MonoBehaviour
     public bool isLocked = false;
     void Start()
     {
-        buttons.SetActive(false);
-        canvas.SetActive(true);
-        StartCoroutine(CanvasDisable()); 
+        //buttons.SetActive(false);
+        //canvas.SetActive(true);
+        //StartCoroutine(CanvasDisable()); 
         
     }
 
