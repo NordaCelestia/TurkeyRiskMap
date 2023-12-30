@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7781b0e3-710e-450f-b6a2-96beb3162e1a" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "assignee": "elifcr"
+    }
+  ],
+  "lastFilter": {
+    "assignee": "elifcr"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a1fea1a8-b5c9-4792-a808-74853e9a1f30" />
+        <option name="url" value="https://github.com/TurkeyNaturalDisasterMap/TurkeyRiskMap.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2ZuP3gWsV2OmQ7JFViI7l4Gtg5F" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/İntelliJ Proje/TurkeyRiskMap/TurkeyRiskMap/TurkeyRiskMap.db",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys",
+    "two.files.diff.last.used.file": "D:/İntelliJ Proje/TurkeyRiskMap/TurkeyRiskMap/TurkeyRiskMap.db"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7781b0e3-710e-450f-b6a2-96beb3162e1a" name="Changes" comment="" />
+      <created>1703268793455</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703268793455</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Deneme">
+      <option name="closed" value="true" />
+      <created>1703269420271</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703269420271</updated>
+    </task>
+    <task id="LOCAL-00002" summary="SQL düzenleme">
+      <option name="closed" value="true" />
+      <created>1703941666577</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703941666577</updated>
+    </task>
+    <task id="LOCAL-00003" summary="SQL düzenleme">
+      <option name="closed" value="true" />
+      <created>1703942635685</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703942635685</updated>
+    </task>
+    <task id="LOCAL-00004" summary="SQL düzenleme">
+      <option name="closed" value="true" />
+      <created>1703944332029</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703944332029</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Deneme" />
+    <MESSAGE value="SQL düzenleme" />
+    <option name="LAST_COMMIT_MESSAGE" value="SQL düzenleme" />
+  </component>
+</project>
