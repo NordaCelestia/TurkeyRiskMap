@@ -89,6 +89,10 @@ TagManager:
   - 79
   - 80
   - 81
+  - earthquake
+  - flood
+  - landslide
+  - fire
   layers:
   - Default
   - TransparentFX
