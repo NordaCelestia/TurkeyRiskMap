@@ -53,13 +53,12 @@ while attempts < max_attempts:
         for row in rows:
             print(row)
 
-        # Değişiklikleri kaydet ve bağlantıyı kapat
         conn.commit()
         conn.close()
 
-        break  # Döngüden çık
+        break 
 
     except sqlite3.OperationalError as e:
         print(f"OperationalError: {e}")
         attempts += 1
-        time.sleep(1)  # Bekleme süresi
+        time.sleep(1) 
