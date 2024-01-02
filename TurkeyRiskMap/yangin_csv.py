@@ -6,15 +6,11 @@ import os
 dosya_adı = 'modis_2017_Turkey.csv'
 dosya_yolu = r'C:\Users\ipekc\OneDrive\Masaüstü\Yangın csv' + os.path.sep + dosya_adı
 
-# Veritabanına bağlan
 conn = sqlite3.connect('yangin.db')
 cursor = conn.cursor()
 
 for i in range(8):
-    # Tablo adını oluştur
     tablo_adi = f'yangin_{i+1}'
-    
-    # Tablo oluşturma sorgusu
     cursor.execute(f'''
         CREATE TABLE IF NOT EXISTS {tablo_adi} (
             id INTEGER PRIMARY KEY,
