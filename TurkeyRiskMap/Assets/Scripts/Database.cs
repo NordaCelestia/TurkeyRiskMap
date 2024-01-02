@@ -9,6 +9,7 @@ public class Database : MonoBehaviour
 {
     string dbName = "URI=file:" + @"D:\Unity projects\TurkeyRiskMap\TurkeyRiskMap\TurkeyRiskMap\TurkeyRiskMap.db";
     string data;
+    public GameObject gamepinfoObject, disasterinfos;
 
     void Start()
     {

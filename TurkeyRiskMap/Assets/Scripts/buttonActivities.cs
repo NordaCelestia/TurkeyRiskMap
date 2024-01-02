@@ -9,7 +9,7 @@ using System;
 public class buttonActivites : MonoBehaviour
 {
     Database db;
-    
+
     public GameObject canvas, inspector;
     public TMP_Text pName, pInfo, IText, IRain, IDisaster, ISoil;
 
@@ -41,14 +41,20 @@ public class buttonActivites : MonoBehaviour
     
     public void openCanvas()
     {
+
+        
+
         for (int i = 0; i < controlArray.Length; i++)
         {
             if (this.gameObject.tag == controlArray[i])
             {
+                canvas.SetActive(true);
+                
 
                 pName.text = db.getData(Convert.ToInt32(controlArray[i]), "city");
                 pInfo.text = db.getData(Convert.ToInt32(controlArray[i]), "cityInfo");
-                canvas.SetActive(true);
+                
+                
 
             }
 
@@ -85,6 +91,8 @@ public class buttonActivites : MonoBehaviour
 
     public void closeCanvas()
     {
+        db.gamepinfoObject.SetActive(true);
+        db.disasterinfos.SetActive(false);
         canvas.SetActive(false);
     }
 

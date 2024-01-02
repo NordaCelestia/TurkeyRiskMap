@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InfoWindow_Disasters : MonoBehaviour
 {
@@ -8,7 +9,11 @@ public class InfoWindow_Disasters : MonoBehaviour
     GameObject disasterInfoPanel, pInfo;
     string control;
 
-    
+
+    private void Start()
+    {
+        this.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.1f;
+    }
 
     public void openPanel()
     {
