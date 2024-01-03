@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(cam.orthographicSize);
+        
 
         if (script.isLocked == false)
         {

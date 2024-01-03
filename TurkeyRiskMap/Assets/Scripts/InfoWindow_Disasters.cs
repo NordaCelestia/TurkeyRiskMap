@@ -18,9 +18,9 @@ public class InfoWindow_Disasters : MonoBehaviour
     public void openPanel()
     {
         control = this.gameObject.tag;
-        
 
-        
+
+    
 
         switch (control)
         {
@@ -30,6 +30,7 @@ public class InfoWindow_Disasters : MonoBehaviour
                 break;
 
             case "fire":
+                Application.OpenURL("file:///C:/Users/fatih/fire_map.html");
                 Debug.Log(control);
                 break;
 

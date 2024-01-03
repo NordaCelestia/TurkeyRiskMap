@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class topLeftButton : MonoBehaviour
 {
-    public GameObject infoPanel;
-    void Start()
-    {
-        
-    }
-
     
-    void Update()
-    {
-        
-    }
+    public Animator aniTop, aniBot;
 
     public void showInfoPanel()
     {
-        infoPanel.SetActive(true);
+        aniBot.SetBool("highlight",true);
+    }
+    public void showInfoPanelTop()
+    {
+        aniTop.SetBool("highlight", true);
     }
 
     public void closeInfoPanel()
     {
-        infoPanel.SetActive(false);
+        aniBot.SetBool("highlight", false);
+    }
+    public void closeInfoPanelTop()
+    {
+        aniTop.SetBool("highlight", false);
     }
 }
