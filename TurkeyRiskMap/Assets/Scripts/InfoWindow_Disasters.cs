@@ -18,14 +18,14 @@ public class InfoWindow_Disasters : MonoBehaviour
     public void openPanel()
     {
         control = this.gameObject.tag;
-        pInfo.SetActive(false);
-        disasterInfoPanel.SetActive(true);
+        
 
         
 
         switch (control)
         {
             case "earthquake":
+                Application.OpenURL("file:///C:/Users/fatih/Desktop/earthquake_map.html");
                 Debug.Log(control);
                 break;
 
