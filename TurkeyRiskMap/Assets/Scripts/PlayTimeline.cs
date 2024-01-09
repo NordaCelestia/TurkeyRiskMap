@@ -6,26 +6,20 @@ using UnityEngine.Playables;
 
 public class PlayTimeline : MonoBehaviour
 {
+
+    public GameObject sky;
     
-    public GameObject canvas,buttons;
-    public PlayableDirector director;
-    public bool isLocked = false;
     void Start()
     {
-        //buttons.SetActive(false);
-        //canvas.SetActive(true);
-        //StartCoroutine(CanvasDisable()); 
+        
+        StartCoroutine(CanvasDisable()); 
         
     }
 
    IEnumerator CanvasDisable()
     {
-        isLocked = true;
-        director.Play();
 
-        yield return new WaitForSeconds(4.9f);
-        canvas.SetActive(false);
-        buttons.SetActive(true);
-        isLocked = false;
+        yield return new WaitForSeconds(2.3f);
+        sky.SetActive(false);
     }
 }

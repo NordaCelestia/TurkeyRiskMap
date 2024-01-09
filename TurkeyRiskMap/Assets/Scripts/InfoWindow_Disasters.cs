@@ -8,7 +8,7 @@ public class InfoWindow_Disasters : MonoBehaviour
     [SerializeField]
     GameObject disasterInfoPanel, pInfo;
     string control;
-
+    AudioSource ass;
 
     private void Start()
     {
@@ -27,11 +27,15 @@ public class InfoWindow_Disasters : MonoBehaviour
             case "earthquake":
                 Application.OpenURL("file:///C:/Users/fatih/Desktop/earthquake_map.html");
                 Debug.Log(control);
+                ass = this.gameObject.GetComponent<AudioSource>();
+                ass.Play();
                 break;
 
             case "fire":
                 Application.OpenURL("file:///C:/Users/fatih/fire_map.html");
                 Debug.Log(control);
+                ass = this.gameObject.GetComponent<AudioSource>();
+                ass.Play();
                 break;
 
             case "flood":

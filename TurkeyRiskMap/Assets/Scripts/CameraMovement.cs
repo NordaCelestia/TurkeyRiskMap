@@ -20,8 +20,8 @@ public class CameraMovement : MonoBehaviour
     {
         
 
-        if (script.isLocked == false)
-        {
+        
+        
 
             PanCamera();
 
@@ -33,7 +33,7 @@ public class CameraMovement : MonoBehaviour
             {
                 cam.fieldOfView -= Input.GetAxis("Mouse ScrollWheel") * zoom;
             }
-        }
+        
     }
 
     private void PanCamera()

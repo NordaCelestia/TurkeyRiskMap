@@ -6,6 +6,7 @@ public class topLeftButton : MonoBehaviour
 {
     
     public Animator aniTop, aniBot;
+    AudioSource ass;
 
     public void showInfoPanel()
     {
