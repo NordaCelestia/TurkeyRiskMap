@@ -11,6 +11,7 @@ public class UnityServer : MonoBehaviour
     TcpClient client;
     NetworkStream nwStream;
     AudioSource ass;
+    public TextMeshProUGUI tmp;
 
     public Animator anim;
     public GameObject canvas;
@@ -20,6 +21,7 @@ public class UnityServer : MonoBehaviour
     public float b = 9;
     public float c = 7;
     public float d = 4;
+    public float temp;
 
 
 
@@ -28,6 +30,10 @@ public class UnityServer : MonoBehaviour
         a = int.Parse(lat.text);
         b = int.Parse(longg.text);
         c = int.Parse(mag.text);
+
+
+        
+
 
         Task.Run(async () => await ConnectAndCommunicateAsync());
     }
@@ -42,36 +48,43 @@ public class UnityServer : MonoBehaviour
         nwStream = client.GetStream();
         Debug.Log("Connected!");
 
-        // Unity tarafýndan Python'a gönderilecek veriyi ayarla
+        
         string dataToSend = $"{a},{b},{c},{d}\n";
         byte[] dataBytes = Encoding.UTF8.GetBytes(dataToSend);
 
-        // Unity'den Python'a veriyi gönder
+        
         await nwStream.WriteAsync(dataBytes, 0, dataBytes.Length);
 
-        // Python'dan gelen veriyi oku
+        
         byte[] buffer = new byte[client.ReceiveBufferSize];
         int bytesRead = await nwStream.ReadAsync(buffer, 0, client.ReceiveBufferSize);
         string dataReceived = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
-        // Python'dan gelen veriyi a, b, c, d deðiþkenlerine ayýr
+        
         string[] values = dataReceived.Split(',');
         a = float.Parse(values[0]);
         b = float.Parse(values[1]);
         c = float.Parse(values[2]);
         d = float.Parse(values[3]);
 
-        // Örneðin, Unity tarafýnda bu deðerleri kullanabilirsiniz:
-        Debug.Log(d / (5000000000000));
+        Debug.Log(d / 500000000000);
+        
     }
 
-    async void Start()
+    public void sonuclar()
     {
+        temp = (d / 500000000000);
+        if (temp > 0)
+        {
+            tmp.text = temp.ToString("F3");
+        }
+        else
+        {
+            temp = temp * (-1);
+            tmp.text = temp.ToString("F3");
 
+        }
         
-
-
-       
     }
 
     public void Sound()
