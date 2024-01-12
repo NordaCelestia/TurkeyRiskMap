@@ -3,11 +3,9 @@ import folium
 from folium.plugins import MarkerCluster
 import pandas as pd
 
-# Türkiye il sınırları
 gdf_turkiye = gpd.read_file("C:/Users/ipekc/OneDrive/Masaüstü/Proje shp/İl_Sınırı.shp")
-gdf_turkiye = gdf_turkiye.to_crs(epsg=4326)  # Koordinat sistemini düzelt
+gdf_turkiye = gdf_turkiye.to_crs(epsg=4326)  
 
-# Veri setleri
 data_sets = []
 for i in range(2017, 2021):
     dosya_yolu = 'C:/Users/ipekc/OneDrive/Masaüstü/Yangın/'
@@ -15,19 +13,16 @@ for i in range(2017, 2021):
     data_set = pd.read_csv(csv_path)
     data_sets.append(data_set)
 
-# Veri setinin koordinat sistemini düzeltme
 for i, data_set in enumerate(data_sets):
     data_sets[i] = gpd.GeoDataFrame(data_set, geometry=gpd.points_from_xy(data_set['longitude'], data_set['latitude']))
     data_sets[i] = data_sets[i].set_crs(epsg=4326)
 
-# Veri setlerini, sınırlar ile birleştirme
 gdf_fire = gdf_turkiye.copy()
 geometry_column_data_set = 'geometry'
 
 for i, data_set in enumerate(data_sets):
     gdf_fire = gdf_fire.merge(data_set, how='left', left_on=geometry_column_data_set, right_on=geometry_column_data_set, suffixes=('', f'_{i+1}'))
 
-# Folium haritası oluşturma
 m = folium.Map(location=[39, 35], zoom_start=6)
 
 # Her bir veri setini haritaya ekleme
