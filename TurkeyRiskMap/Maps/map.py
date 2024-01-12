@@ -25,13 +25,11 @@ for i, data_set in enumerate(data_sets):
 
 m = folium.Map(location=[39, 35], zoom_start=6)
 
-# Her bir veri setini haritaya ekleme
 for i, data_set in enumerate(data_sets):
     marker_cluster = MarkerCluster().add_to(m)
     for index, row in data_set.iterrows():
         folium.Marker([row['latitude'], row['longitude']], popup=f'Yangın {i+1}').add_to(marker_cluster)
 
-# Türkiye sınırlarını haritaya ekleme
 folium.GeoJson(gdf_turkiye).add_to(m)
 
 m.save('fire_map.html')
